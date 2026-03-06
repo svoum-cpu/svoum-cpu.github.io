@@ -1,11 +1,29 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from '/Users/sofiavoumvourakis/Documents/Projects/my-personal-site/src/layouts/Layout.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Home">
+  <main class="hero">
+    <div class="gradient-overlay">
+      <h1>Sofia Voumvourakis</h1>
+      <p class="intro-text">
+        Hi! I’m Sofia, a government and data science student who often finds herself asking: “To advance humanity, are we losing it?” I am driven to build a future where technology governance is resilient and equitable. Beyond the screen, I’m creative at heart—dabbling in poetry and art—and curious in practice—exploring philosophy, psychology, and global perspectives.
+      </p>
+    </div>
+  </main>
 </Layout>
+
+<style>
+  .hero {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Subtle gradient from Ocean Blue to Turquoise */
+    background: linear-gradient(135deg, #1E40AF 0%, #2DD4BF 100%);
+    color: white;
+  }
+  .hero h1 { color: white; font-size: 4rem; margin-bottom: 1rem; }
+  .intro-text { max-width: 700px; font-size: 1.25rem; font-weight: 300; padding: 0 1rem; }
+</style>

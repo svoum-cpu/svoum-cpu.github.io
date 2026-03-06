@@ -1,0 +1,81 @@
+---
+import Layout from '/Users/sofiavoumvourakis/Documents/Projects/my-personal-site/src/layouts/Layout.astro';
+---
+<Layout title="Resume">
+  <section class="resume-container">
+    <header class="resume-header">
+      <h1>Resume</h1>
+      <p>Williamsburg, VA | sev@wm.edu</p>
+    </header>
+
+    <div class="resume-grid">
+      <aside class="sidebar">
+        <section>
+          <h3>Education</h3>
+          <div class="entry">
+            <strong>William & Mary</strong> [cite: 4]
+            <p>B.A. Government & Data Science [cite: 5]</p>
+            <p class="date">Exp. May 2028 [cite: 6]</p>
+            <p class="details">Dean's List [cite: 5]</p>
+          </div>
+          <div class="entry">
+            <strong>Brooklyn Technical High School</strong> [cite: 8]
+            <p>Law & Society Major [cite: 8]</p>
+          </div>
+        </section>
+
+        <section>
+          <h3>Skills</h3>
+          <p>Java, Python, Problem-Solving, Communication, Critical Thinking [cite: 13]</p>
+          <p><strong>Languages:</strong> Greek (Intermediate), Italian (Intermediate) [cite: 13]</p>
+        </section>
+      </aside>
+
+      <div class="main-resume">
+        <section>
+          <h3>Research Experience</h3>
+          <div class="entry">
+            <strong>Democratic Erosion Project</strong> [cite: 15]
+            <p class="role">Project Manager | Aug 2025–Present [cite: 16, 17]</p>
+            <ul>
+              <li>Spearheaded onboarding and technical training of 14 research assistants[cite: 18].</li>
+              <li>Optimized training by producing a 20-minute instructional video[cite: 19].</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h3>Research Projects</h3>
+          <ul>
+            <li><strong>Research Methods:</strong> Impact of NCII deepfakes on female politicians[cite: 24, 25].</li>
+            <li><strong>AP Computer Science A:</strong> Facial Recognition Technology (FRT) in school security[cite: 26, 27].</li>
+            <li><strong>Criminal Law:</strong> Analysis of educational programs in prisons[cite: 30, 31].</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Additional Experience</h3>
+          <div class="entry">
+            <strong>Nassau County Executive Intern</strong> [cite: 34, 35]
+            <p class="date">Jun 2025–Aug 2025 [cite: 37]</p>
+          </div>
+          <div class="entry">
+            <strong>Smok-Haus Enterprises</strong> [cite: 40]
+            <p>Marketing & Customer Engagement [cite: 42, 44]</p>
+            <p class="details">Designed material using Procreate and Vectornator[cite: 45].</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .resume-container { background: white; padding: 3rem; margin-top: 2rem; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+  .resume-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; margin-top: 2rem; }
+  h3 { color: var(--ocean-blue); border-bottom: 2px solid var(--soft-turquoise); padding-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; }
+  .entry { margin-bottom: 1.5rem; }
+  .date { font-style: italic; color: #666; font-size: 0.9rem; }
+  ul { padding-left: 1rem; font-size: 0.95rem; }
+  @media (max-width: 768px) { .resume-grid { grid-template-columns: 1fr; } }
+</style>
