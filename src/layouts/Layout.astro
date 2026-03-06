@@ -1,59 +1,104 @@
 ---
 const { title } = Astro.props;
 ---
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{title} | Sofia Voumvourakis</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <nav>
-      <div class="nav-container">
-        <a href="/" class="logo">S.E.V.</a>
-        <div class="nav-links">
-          <a href="/">Home</a>
-          <a href="/resume">Resume</a>
-          <a href="/art">Art</a>
-          <a href="/blog">Blog</a>
-          <a href="/contact">Contact</a>
-        </div>
-      </div>
-    </nav>
-    <slot />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&display=swap" rel="stylesheet">
     <style is:global>
       :root {
-        --cool-grey: #F3F4F6;
-        --ocean-blue: #1E40AF;
-        --soft-turquoise: #2DD4BF;
-        --dark-navy: #0F172A;
+        --charcoal: #333333;
+        --muted-teal: #5F8D8A;
+        --pastel-teal: #E8F0EF;
+        --soft-grey: #F4F4F4;
+        --text-grey: #4A4A4A;
       }
-      body { 
-        background-color: var(--cool-grey); /* 60% base */
-        color: var(--dark-navy); 
-        font-family: 'Inter', sans-serif;
+      
+      body {
         margin: 0;
+        padding: 0;
+        background-color: var(--soft-grey);
+        color: var(--charcoal);
+        font-family: "Times New Roman", Times, serif;
         line-height: 1.6;
       }
-      nav { 
-        background: var(--ocean-blue); /* 30% structure */
-        padding: 1.5rem 0;
-        color: white;
+
+      h1, h2, h3, .artistic-font {
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 600;
+        color: var(--charcoal);
       }
-      .nav-container {
-        max-width: 1100px;
-        margin: 0 auto;
+
+      nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 2rem 10%;
+        background: white;
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      .logo {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2rem;
+        text-decoration: none;
+        color: var(--charcoal);
+        letter-spacing: 2px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--charcoal);
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      /* Navigation Hover Effect */
+      .nav-links a:hover {
+        color: var(--muted-teal);
+      }
+      .nav-links a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: -2px;
+        left: 0;
+        background-color: var(--muted-teal);
+        transition: width 0.3s ease;
+      }
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      section {
+        max-width: 900px;
+        margin: 4rem auto;
         padding: 0 2rem;
       }
-      .logo { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.5rem; text-decoration: none; color: var(--soft-turquoise); }
-      .nav-links a { color: white; text-decoration: none; margin-left: 2rem; font-weight: 400; transition: color 0.3s; }
-      .nav-links a:hover { color: var(--soft-turquoise); }
-      h1, h2 { font-family: 'Playfair Display', serif; color: var(--ocean-blue); }
-      section { max-width: 900px; margin: 4rem auto; padding: 0 2rem; }
     </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/" class="logo">SV</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/resume">Resume</a>
+        <a href="/art">Art</a>
+        <a href="/blog">Blog</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </nav>
+    <slot />
   </body>
 </html>

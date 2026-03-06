@@ -2,19 +2,61 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="Contact">
-  <section class="contact-card">
-    <h2>Get in Touch</h2>
-    <p><strong>Email:</strong> sev@wm.edu </p>
-    <p><strong>Phone:</strong> (516) 000-0000 </p>
-    <p><strong>Location:</strong> Williamsburg, VA </p>
+  <section class="contact-section">
+    <div class="header-group">
+      <h1>Get in Touch</h1>
+      <p class="subheader">I’d like to hear from you!</p>
+    </div>
+
+    <div class="contact-links">
+      <a href="mailto:sev@wm.edu">sev@wm.edu</a>
+      <a href="tel:+15160000000">(516) 000-0000</a>
+    </div>
+
+    <form class="contact-form">
+      <div class="form-row">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+      </div>
+      <textarea placeholder="Your Message" rows="6"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 </Layout>
 
 <style>
-  .contact-card {
-    text-align: center;
-    border: 2px solid var(--ocean-blue);
-    padding: 3rem;
+  .contact-section { text-align: center; }
+  .header-group h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+  .subheader { font-style: italic; color: var(--muted-teal); margin-bottom: 2rem; }
+  
+  .contact-links { margin-bottom: 3rem; display: flex; justify-content: center; gap: 2rem; }
+  .contact-links a { color: var(--charcoal); font-size: 1.2rem; text-decoration: none; border-bottom: 1px solid var(--muted-teal); padding-bottom: 5px; }
+  .contact-links a:hover { color: var(--muted-teal); }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .form-row { display: flex; gap: 1rem; }
+  input, textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    font-family: "Times New Roman", serif;
     background: white;
   }
+  button {
+    background: var(--charcoal);
+    color: white;
+    padding: 1rem;
+    border: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  button:hover { background: var(--muted-teal); }
 </style>
