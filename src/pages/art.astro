@@ -15,46 +15,59 @@ import blackAbstract from '../assets/sketch17.png'; //Imports sketch17
 ---
 
 <Layout title="Art">
-  <div class="art-grid-container">
+  <div class="art-page">
     <div class="art-grid">
-      <div class="art-item"><Image src={threeAliens} alt="Artwork" /></div>
-      <div class="art-item"><Image src={chaosSketch} alt="Artwork" /></div>
-      <div class="art-item"><Image src={trioAbstract} alt="Artwork" /></div>
-      <div class="art-item"><Image src={brokenFace} alt="Artwork" /></div>
-      <div class="art-item"><Image src={orangeAbstract} alt="Artwork" /></div>
-      <div class="art-item"><Image src={threeHeads} alt="Artwork" /></div>
-      <div class="art-item"><Image src={greenAbstract} alt="Artwork" /></div>
-      <div class="art-item"><Image src={blueAbstract} alt="Artwork" /></div>
-      <div class="art-item"><Image src={blackAbstract} alt="Artwork" /></div>
-  
+      <a href="#threeAliens" class="art-item"><Image src={threeAliens} alt="Art 1" /></a>
+      <a href="#chaosSketch" class="art-item"><Image src={chaosSketch} alt="Art 2" /></a>
+      <a href="#trioAbstract" class="art-item"><Image src={trioAbstract} alt="Art 3" /></a>
+      <a href="#brokenFace" class="art-item"><Image src={brokenFace} alt="Art 4" /></a>
+      <a href="#orangeAbstract" class="art-item"><Image src={orangeAbstract} alt="Art 5" /></a>
+      <a href="#threeHeads" class="art-item"><Image src={threeHeads} alt="Art 6" /></a>
+      <a href="#greenAbstract" class="art-item"><Image src={greenAbstract} alt="Art 7" /></a>
+      <a href="#blueAbstract" class="art-item"><Image src={blueAbstract} alt="Art 8" /></a>
+      <a href="#blackAbstract" class="art-item"><Image src={blackAbstract} alt="Art 9" /></a>
     </div>
-  </div>
+
+      <div id ="threeAliens" class="lightbox"><a href="#" class="close"></a><Image src={threeAliens} alt="Art 1" /></div>
+      <div id ="chaosSketch" class="lightbox"><a href="#" class="close"></a><Image src={chaosSketch} alt="Art 2" /></div>
+      <div id ="trioAbstract" class="lightbox"><a href="#" class="close"></a><Image src={trioAbstract} alt="Art 3" /></div>
+      <div id ="brokenFace" class="lightbox"><a href="#" class="close"></a><Image src={brokenFace} alt="Art 4" /></div>
+      <div id ="orangeAbstract" class="lightbox"><a href="#" class="close"></a><Image src={orangeAbstract} alt="Art 5" /></div>
+      <div id ="threeHeads" class="lightbox"><a href="#" class="close"></a><Image src={threeHeads} alt="Art 6" /></div>
+      <div id ="greenAbstract" class="lightbox"><a href="#" class="close"></a><Image src={greenAbstract} alt="Art 7" /></div>
+      <div id ="blueAbstract" class="lightbox"><a href="#" class="close"></a><Image src={blueAbstract} alt="Art 8" /></div>
+      <div id ="blackAbstract" class="lightbox"><a href="#" class="close"></a><Image src={blackAbstract} alt="Art 9" /></div>
+    </div>
 </Layout>
 
 <style>
-  .art-grid-container {
-    padding: 2rem 5%;
-  }
   .art-grid {
     display: grid;
-    /* Fixed 3-column grid that doesn't overlap */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-  }
-  .art-item {
-    background: white;
-    padding: 10px;
-    border: 1px solid #ddd;
-    transition: transform 0.3s ease;
-  }
-  .art-item:hover {
-    transform: translateY(-5px);
-    border-color: var(--muted-teal);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 2rem;
   }
   .art-item img {
     width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 5; /* Forces all images to a consistent shape */
+    height: 350px;
     object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s;
   }
+  .art-item:hover img { transform: scale(1.03); }
+
+  /* Lightbox Logic */
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+  }
+  .lightbox:target { display: flex; }
+  .lightbox img { max-width: 90%; max-height: 80%; border: 5px solid white; }
+  .close { position: absolute; width: 100%; height: 100%; cursor: default; }
 </style>

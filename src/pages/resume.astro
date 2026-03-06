@@ -2,109 +2,104 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="Resume">
-  <div class="resume-layout">
-    <aside class="sidebar-nav">
+  <div class="resume-container">
+    <aside class="resume-sidebar">
+      <h3 class="elegant-title">Navigation</h3>
       <a href="#education">Education</a>
-      <a href="#research">Research</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
+      <a href="#research">Research</a>
+      <a href="#projects">Policy Work</a>
+      <a href="#experience">Experience</a>
     </aside>
 
-    <div class="content">
+    <main class="resume-body">
       <section id="education">
-        <h2>Education</h2>
+        <h2 class="creative-header section-head">Education</h2>
         <div class="entry">
-          <h3>William & Mary <span class="date">Exp. May 2028</span></h3>
-          <p class="sub">B.A. Government & Data Science (Dean's List)</p>
+          <h3 class="elegant-title">William & Mary</h3>
+          <p class="details">B.A. Intended Majors: Government, Data Science (Dean's List) | Exp. May 2028</p>
+          <ul class="resume-list">
+            <li><strong>Technology & Data:</strong> Problem Solving with Generative AI, Intro to Data Science.</li>
+            <li><strong>Research & Policy:</strong> Research Methods, Philosophy of Technology, International Security, Political Theory.</li>
+          </ul>
         </div>
         <div class="entry">
-          <h3>Brooklyn Technical High School <span class="date">June 2024</span></h3>
-          <p class="sub">Advanced Regents Diploma | Law & Society Major</p>
+          <h3 class="elegant-title">Brooklyn Technical High School</h3>
+          <p class="details">Advanced Regents Diploma | Law & Society Major | June 2024</p>
         </div>
       </section>
 
+      <section id="skills">
+        <h2 class="creative-header section-head">Skills</h2>
+        <p>Java | Python | Generative AI Implementation | Problem-Solving | Communication | Critical Thinking</p>
+        <p><strong>Languages:</strong> Greek (Intermediate), Italian (Intermediate)</p>
+      </section>
+
       <section id="research">
-        <h2>Research Experience</h2>
+        <h2 class="creative-header section-head">Research Experience</h2>
         <div class="entry">
-          <h3>Democratic Erosion Project <span class="date">Aug 2025 – Present</span></h3>
-          <p class="role">Project Manager</p>
-          <ul>
-            <li>Spearheaded onboarding and technical training for 14 research assistants on subnational democratic erosion.</li>
-            <li>Optimized training by producing a 20-minute instructional video for future research cohorts.</li>
+          <h3 class="elegant-title">Democratic Erosion Project</h3>
+          <p class="role">Project Manager (Aug 2025-Present)</p>
+          <ul class="resume-list">
+            <li>Spearheaded onboarding for 14 research assistants on democratic erosion data entry.</li>
+            <li>Produced a 20-minute instructional video for future research cohorts.</li>
+            <li>Synthesized news articles (2008-2024) regarding threats to democratic institutions.</li>
           </ul>
         </div>
       </section>
 
       <section id="projects">
-        <h2>Research Projects</h2>
+        <h2 class="creative-header section-head">Research Projects</h2>
         <div class="entry">
-          <h3>Deepfakes & Political Participation</h3>
-          <p>Analyzed the impact of NCII deepfakes on female politicians, focusing on digital rights and democratic integrity.</p>
-        </div>
-        <div class="entry">
-          <h3>Facial Recognition Technology (FRT)</h3>
-          <p>Investigated the use of FRT in school security, analyzing technical feasibility and civil liberty implications.</p>
+          <h3 class="elegant-title">Digital Rights & Security</h3>
+          <ul class="resume-list">
+            <li><strong>Deepfakes:</strong> Impact of NCII deepfakes on female politicians.</li>
+            <li><strong>FRT:</strong> Technical feasibility of Facial Recognition in schools.</li>
+            <li><strong>Policy:</strong> National School Lunch Program (NSLP) effectiveness.</li>
+          </ul>
         </div>
       </section>
 
       <section id="experience">
-        <h2>Additional Experience</h2>
+        <h2 class="creative-header section-head">Additional Experience</h2>
         <div class="entry">
-          <h3>Office of the Nassau County Executive <span class="date">Summer 2025</span></h3>
-          <p class="role">Crime Victim Advocate Intern</p>
+          <h3 class="elegant-title">Nassau County Executive</h3>
+          <p class="role">OCVA Intern (Jun 2025-Aug 2025)</p>
+          <p>Supported community outreach and client services in court settings.</p>
         </div>
         <div class="entry">
-          <h3>Smok-Haus Enterprises <span class="date">2019 – 2024</span></h3>
-          <p class="role">Marketing & Design</p>
+          <h3 class="elegant-title">Smok-Haus Enterprises</h3>
+          <p class="role">Marketing & Customer Engagement (2019-2024)</p>
+          <p>Designed packaging for "Tipsy Bull" using Procreate/Vectornator; managed ~200 reviews.</p>
         </div>
       </section>
-
-      <section id="skills">
-        <h2>Skills</h2>
-        <p><strong>Technical:</strong> Java, Python, Problem-Solving, Data Entry</p>
-        <p><strong>Languages:</strong> Greek (Intermediate), Italian (Intermediate)</p>
-      </section>
-    </div>
+    </main>
   </div>
 </Layout>
 
 <style>
-  .resume-layout {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 4rem;
-    margin-top: 2rem;
-  }
-  .sidebar-nav {
+  .resume-container { display: flex; gap: 4rem; }
+  .resume-sidebar {
     position: sticky;
-    top: 4rem;
+    top: 2rem;
     height: fit-content;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    background: var(--tan-sidebar);
+    padding: 2rem;
+    min-width: 180px;
+    border-radius: 15px;
   }
-  .sidebar-nav a {
+  .resume-sidebar a {
+    display: block;
+    padding: 0.8rem 0;
     text-decoration: none;
-    color: var(--muted-teal);
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
-    border-left: 2px solid transparent;
-    padding-left: 1rem;
-    transition: 0.3s;
+    color: var(--charcoal);
+    font-weight: bold;
+    border-bottom: 1px solid var(--soft-teal);
   }
-  .sidebar-nav a:hover {
-    border-left: 2px solid var(--muted-teal);
-    background: var(--pastel-teal);
-  }
-  h2 {
-    font-size: 2.2rem;
-    border-bottom: 1px solid var(--muted-teal);
-    margin-bottom: 2rem;
-    color: var(--muted-teal);
-  }
-  .entry { margin-bottom: 2.5rem; }
-  .date { float: right; font-size: 1rem; color: var(--text-grey); font-family: "Times New Roman", serif; font-weight: normal; }
-  .sub { font-style: italic; margin-bottom: 0.5rem; }
-  ul { padding-left: 1.2rem; margin-top: 0.5rem; }
+  .resume-sidebar a:hover { color: var(--teal-accent); }
+  
+  .section-head { font-size: 3.5rem; color: var(--teal-accent); margin-bottom: 1rem; }
+  .entry { margin-bottom: 3rem; }
+  .details { font-style: italic; color: var(--teal-accent); }
+  .resume-list { padding-left: 1.2rem; }
 </style>

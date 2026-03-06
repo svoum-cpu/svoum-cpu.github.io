@@ -1,30 +1,48 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout title="Blog">
-  <article class="blog-post">
-    <h1 class="blog-title">Gathering Figs</h1>
-    <p class="subtitle">A memory of Pappou and the garden</p>
-    
-    <div class="blog-content">
-      <p>My feet were carefully placed in the stable crevices of the long smooth limbs of the tree; while I was normally scared of heights, the feeling of something alive supporting me gave me comfort. I reached forward, eyeing a fig whose plump green skin was slowly tearing away from the red and white flesh. I twisted the stem to release it from the branch, and dropped it into the basket below.</p>
+<Layout title="Prose">
+  <div class="prose-background">
+    <article class="story-container">
+      <h1 class="creative-header blog-title">Gathering Figs</h1>
+      <h2 class="subtitle">A memory of Pappou and the garden</h2>
       
-      <p>My Pappou, my grandfather, gave a sharp nod of approval up at me, while hooking his gnarled cane around another branch to bring it down for further inspection. I listened to his advice earnestly, wanting to preserve his ways. When the basket was full, I gently slipped down from the tree; the red soil was laden with hay and plastered with a mush of ant-ridden figs.</p>
+      <div class="story-text">
+        <p>My feet were carefully placed in the stable crevices of the long smooth limbs of the tree; while I was normally scared of heights, the feeling of something alive supporting me gave me comfort. I reached forward, eyeing a fig whose plump green skin was slowly tearing away from the red and white flesh. I twisted the stem to release it from the branch, and dropped it into the basket below.</p>
+        
+        <p>My Pappou, my grandfather, gave a sharp nod of approval up at me, while hooking his gnarled cane around another branch to bring it down for further inspection. I listened to his advice earnestly, wanting to preserve his ways. When the basket was full, I gently slipped down from the tree; the red soil was laden with hay and plastered with a mush of ant-ridden figs.</p>
 
-      <p>Pappou smooths the wispy white strands that barely shield his tanned bald head. He picks up a fig and peels it with his fingers; the swirls and creases of his calloused hands are caked with dirt, his nails are dull and strong. He waved me over and handed me a half. A thin white skin covered the pink flesh; it was chewy and sweet with a slight crunch from the seeds...</p>
+        <p>Pappou smooths the wispy white strands that barely shield his tanned bald head. He picks up a fig and peels it with his fingers; the swirls and creases of his calloused hands are caked with dirt, his nails are dull and strong. He waved me over and handed me a half. A thin white skin covered the pink flesh; it was chewy and sweet with a slight crunch from the seeds.</p>
+
+        <p>I wiped my sticky fingers on my shirt, picked up the basket, and carried it up the limestone stairs, dodging the yellowjackets. I wiggled free from my dusty flip flops and opened the creaky screen door. There are more baskets, filled with more figs.</p>
+
+        <p>Some figs are destined for snacking. They will be peeled, and will follow my sister and cousins and I around on a small plate held by my grandmother; she'll hold one between her fingers and slice them into quarters with a knife; she doesn't need a cutting board, her dexterity is fueled with her memory. They always taste sweeter from her hands.</p>
+
+        <p>Some figs are destined to be roughly chopped and sprinkled with sugar and spices. At the bottom of a deep metal pot they will break down and bubble. Once cooled, the fig jam will be distributed into recycled jars. In the morning it will be smeared on toast with butter and licked from the spoon.</p>
+
+        <p>The rest of the figs are destined to be cut in halves and organized on a long wooden board to dry and wrinkle in the sun. These figs are the ones that would be nestled in our suitcase and flown back to New York. But I knew that it wasn't time yet to go back to New York. I placed the basket on the table and rushed outside; Pappou and I had more treasures to collect from his garden.</p>
       </div>
-  </article>
+    </article>
+  </div>
 </Layout>
 
 <style>
-  .blog-post { max-width: 700px; margin: 4rem auto; background: white; padding: 4rem; }
-  .blog-title {
-    font-size: 4rem;
-    font-style: italic;
-    font-weight: 300;
-    margin-bottom: 0;
-    text-align: center;
+  .prose-background {
+    min-height: 100vh;
+    background-image: url('/figtree.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 4rem 0;
   }
-  .subtitle { text-align: center; color: var(--muted-teal); margin-bottom: 3rem; font-family: 'Cormorant Garamond', serif; }
-  .blog-content p { font-size: 1.2rem; margin-bottom: 1.5rem; text-indent: 2rem; }
+  .story-container {
+    max-width: 750px;
+    margin: 0 auto;
+    background: rgba(253, 246, 236, 0.92); /* Tan base but opaque */
+    padding: 4rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  .blog-title { font-size: 5rem; text-align: center; }
+  .subtitle { text-align: center; font-family: 'Cormorant Garamond', serif; font-weight: bold; font-size: 1.5rem; margin-bottom: 3rem; }
+  .story-text p { font-size: 1.25rem; margin-bottom: 2rem; }
 </style>

@@ -1,35 +1,40 @@
 ---
 const { title } = Astro.props;
 ---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{title} | Sofia Voumvourakis</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&display=swap" rel="stylesheet">
     <style is:global>
       :root {
+        --tan-base: #FDF6EC;
+        --tan-sidebar: #F5EBE0;
         --charcoal: #333333;
-        --muted-teal: #5F8D8A;
-        --pastel-teal: #E8F0EF;
-        --soft-grey: #F4F4F4;
-        --text-grey: #4A4A4A;
+        --teal-accent: #4A7C77;
+        --soft-teal: #D1DEDC;
       }
       
       body {
         margin: 0;
-        padding: 0;
-        background-color: var(--soft-grey);
+        background-color: var(--tan-base);
         color: var(--charcoal);
         font-family: "Times New Roman", Times, serif;
         line-height: 1.6;
       }
 
-      h1, h2, h3, .artistic-font {
+      .creative-header {
+        font-family: 'Pinyon Script', cursive;
+        font-weight: normal;
+      }
+
+      .elegant-title {
         font-family: 'Cormorant Garamond', serif;
-        font-weight: 600;
-        color: var(--charcoal);
+        text-transform: uppercase;
+        letter-spacing: 2px;
       }
 
       nav {
@@ -37,54 +42,40 @@ const { title } = Astro.props;
         justify-content: space-between;
         align-items: center;
         padding: 2rem 10%;
-        background: white;
-        border-bottom: 1px solid #e0e0e0;
       }
 
       .logo {
         font-family: 'Cormorant Garamond', serif;
-        font-size: 2rem;
+        font-size: 2.2rem;
         text-decoration: none;
         color: var(--charcoal);
-        letter-spacing: 2px;
+        font-weight: 300;
       }
 
       .nav-links {
         display: flex;
-        gap: 2rem;
+        gap: 2.5rem;
       }
 
       .nav-links a {
         text-decoration: none;
         color: var(--charcoal);
         font-family: 'Cormorant Garamond', serif;
-        font-size: 1.2rem;
-        transition: all 0.3s ease;
-        position: relative;
+        font-size: 1.1rem;
+        transition: all 0.4s ease;
       }
 
-      /* Navigation Hover Effect */
+      /* Hover Interaction */
       .nav-links a:hover {
-        color: var(--muted-teal);
-      }
-      .nav-links a::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 1px;
-        bottom: -2px;
-        left: 0;
-        background-color: var(--muted-teal);
-        transition: width 0.3s ease;
-      }
-      .nav-links a:hover::after {
-        width: 100%;
+        color: var(--teal-accent);
+        letter-spacing: 1px;
+        transform: translateY(-2px);
       }
 
       section {
-        max-width: 900px;
-        margin: 4rem auto;
-        padding: 0 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
       }
     </style>
   </head>
@@ -95,7 +86,7 @@ const { title } = Astro.props;
         <a href="/">Home</a>
         <a href="/resume">Resume</a>
         <a href="/art">Art</a>
-        <a href="/blog">Blog</a>
+        <a href="/prose">Prose</a>
         <a href="/contact">Contact</a>
       </div>
     </nav>
