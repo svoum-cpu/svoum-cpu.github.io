@@ -5,82 +5,94 @@ import Layout from '../layouts/Layout.astro';
   <div class="resume-wrapper">
     <aside class="resume-sidebar">
       <button class="tab-link active" onclick="openTab(event, 'education')">Education</button>
-      <button class="tab-link" onclick="openTab(event, 'research')">Research</button>
-      <button class="tab-link" onclick="openTab(event, 'projects')">Projects</button>
-      <button class="tab-link" onclick="openTab(event, 'experience')">Experience</button>
-      <button class="tab-link" onclick="openTab(event, 'skills')">Skills</button>
+      <button class="tab-link" onclick="openTab(event, 'research')">Research Experience</button>
+      <button class="tab-link" onclick="openTab(event, 'projects')">Research Projects</button>
+      <button class="tab-link" onclick="openTab(event, 'experience')">Additional Experience</button>
+      <button class="tab-link" onclick="openTab(event, 'skills')">Skills & Interests</button>
     </aside>
 
-    <main class="resume-content-area">
+    <main class="resume-teal-canvas">
       <div id="education" class="tab-content active">
-        <h2 class="dark-teal-header">Education</h2>
-        <div class="box">
-          <p><strong>William & Mary</strong>, Williamsburg, VA</p>
-          <p><strong>Bachelor of Arts, Intended Majors: Government, Data Science (Dean's List)</strong> | Exp. May 2028</p>
-          <ul class="resume-list">
-            <li><strong>Relevant Coursework:</strong> Problem Solving with Generative AI, Introduction to Data Science, Research Methods, Philosophy of Technology, International Security, Introduction to Political Theory</li>
-          </ul>
-        </div>
-        <div class="box">
-          <p><strong>Brooklyn Technical High School</strong>, Brooklyn, NY</p>
-          <p><strong>Advanced Regents Diploma | Law & Society Major</strong> | June 2024</p>
+        <div class="resume-card">
+          <h2 class="card-header">Education</h2>
+          <div class="entry">
+            <p class="org-name">William & Mary <span class="loc">| Williamsburg, VA</span></p>
+            <p class="position">Bachelor of Arts | Exp. May 2028</p>
+            <p class="details"><strong>Intended Majors:</strong> Government and Data Science (Dean’s List)</p>
+            <p class="details"><strong>Relevant Coursework:</strong> Problem Solving with Generative AI, Introduction to Data Science, Research Methods, Philosophy of Technology, International Security, Introduction to Political Theory.</p>
+          </div>
+          <div class="entry">
+            <p class="org-name">Brooklyn Technical High School <span class="loc">| Brooklyn, NY</span></p>
+            <p class="position">Advanced Regents Diploma | June 2024</p>
+            <p class="details"><strong>Major:</strong> Law & Society</p>
+          </div>
         </div>
       </div>
 
       <div id="research" class="tab-content">
-        <h2 class="dark-teal-header">Research Experience</h2>
-        <div class="box">
-          <p><strong>Democratic Erosion Project</strong>, Williamsburg, VA</p>
-          <p><strong>Project Manager</strong> | Aug 2025 – Present</p>
-          <ul class="resume-list">
-            <li>Spearheaded onboarding and technical training of 14 research assistants on subnational democratic erosion identification and data entry protocols.</li>
-            <li>Optimized training by producing a 20-minute instructional video to clarify and supplement existing training materials for future research cohorts.</li>
-            <li>Identified and synthesized relevant news articles from 2008-2024 about threats to democratic institutions in the United States.</li>
-          </ul>
+        <div class="resume-card">
+          <h2 class="card-header">Research Experience</h2>
+          <div class="entry">
+            <p class="org-name">Democratic Erosion Project <span class="loc">| Williamsburg, VA</span></p>
+            <p class="position">Project Manager | Aug 2025 – Present</p>
+            <ul class="resume-list">
+              <li>Spearheaded onboarding and technical training of 14 research assistants on subnational democratic erosion identification and data entry protocols.</li>
+              <li>Optimized training by producing a 20-minute instructional video to clarify and supplement existing training materials.</li>
+              <li>Identified and synthesized relevant news articles (2008-2024) regarding threats to democratic institutions across the United States.</li>
+            </ul>
+          </div>
         </div>
       </div>
 
       <div id="projects" class="tab-content">
-        <h2 class="dark-teal-header">Research Projects</h2>
-        <div class="box">
-          <p><strong>Facial Recognition Technology (FRT)</strong></p>
-          <p>Investigated the use of FRT to enhance school security, analyzing technical feasibility and potential implementation challenges.</p>
-        </div>
-        <div class="box">
-          <p><strong>Deepfakes & Female Politicians</strong></p>
-          <p>Conducted research on the impact of NCII (Non-Consensual Intimate Imagery) deepfakes on female political participation and digital safety.</p>
-        </div>
-        <div class="box">
-          <p><strong>National School Lunch Program (NSLP)</strong></p>
-          <p>Synthesized data regarding the effectiveness and policy reach of the NSLP in varied demographics.</p>
+        <div class="resume-card">
+          <h2 class="card-header">Research Projects</h2>
+          <div class="entry">
+            <p class="org-name">Facial Recognition Technology (FRT)</p>
+            <p class="details">Investigated the use of FRT to enhance school security, analyzing technical feasibility and potential implementation challenges regarding privacy and digital safety.</p>
+          </div>
+          <div class="entry">
+            <p class="org-name">Deepfakes & Female Politicians</p>
+            <p class="details">Conducted research on the impact of Non-Consensual Intimate Imagery (NCII) deepfakes on female political participation and the resilience of digital democratic spaces.</p>
+          </div>
+          <div class="entry">
+            <p class="org-name">National School Lunch Program (NSLP)</p>
+            <p class="details">Evaluated policy effectiveness and nutritional equity within the NSLP framework.</p>
+          </div>
         </div>
       </div>
 
       <div id="experience" class="tab-content">
-        <h2 class="dark-teal-header">Additional Experience</h2>
-        <div class="box">
-          <p><strong>Office of the Nassau County Executive</strong></p>
-          <p><strong>Summer Intern, Office of Crime Victim Advocate (OCVA)</strong> | Jun 2025 – Aug 2025</p>
-          <ul class="resume-list">
-            <li>Supported community outreach by communicating with families in court and researching victim support groups.</li>
-          </ul>
-        </div>
-        <div class="box">
-          <p><strong>Smok-Haus Enterprises</strong></p>
-          <p><strong>Marketing & Customer Engagement</strong> | 2019 – 2024</p>
-          <ul class="resume-list">
-            <li>Designed marketing material and packaging for Tipsy Bull using Procreate and Vectornator.</li>
-            <li>Managed and responded to approximately 200 customer reviews to improve brand reputation.</li>
-          </ul>
+        <div class="resume-card">
+          <h2 class="card-header">Additional Experience</h2>
+          <div class="entry">
+            <p class="org-name">Office of the Nassau County Executive <span class="loc">| Mineola, NY</span></p>
+            <p class="position">Summer Intern, Office of Crime Victim Advocate (OCVA) | June 2025 – Aug 2025</p>
+            <ul class="resume-list">
+              <li>Supported community outreach by communicating with families in court settings and researching support groups for victims.</li>
+              <li>Synthesized complex legal and social support information for public distribution.</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <p class="org-name">Smok-Haus Enterprises <span class="loc">| Garden City, NY</span></p>
+            <p class="position">Marketing & Customer Engagement | 2019 – 2024</p>
+            <ul class="resume-list">
+              <li>Designed marketing materials and packaging for "Tipsy Bull" using Procreate and Vectornator.</li>
+              <li>Managed and responded to approximately 200 customer reviews, maintaining high brand standards.</li>
+            </ul>
+          </div>
         </div>
       </div>
 
       <div id="skills" class="tab-content">
-        <h2 class="dark-teal-header">Skills</h2>
-        <div class="box">
-          <p><strong>Technical:</strong> Java, Python, Generative AI Implementation, Data Synthesis</p>
-          <p><strong>Professional:</strong> Problem-Solving, Cross-functional Communication, Critical Thinking</p>
-          <p><strong>Languages:</strong> Greek (Intermediate), Italian (Intermediate)</p>
+        <div class="resume-card">
+          <h2 class="card-header">Skills & Interests</h2>
+          <div class="entry">
+            <p class="details"><strong>Technical:</strong> Java, Python, Generative AI Implementation, Data Synthesis.</p>
+            <p class="details"><strong>Languages:</strong> Greek (Intermediate), Italian (Intermediate).</p>
+            <p class="details"><strong>Soft Skills:</strong> Problem-Solving, Communication, Critical Thinking, Graphic Design.</p>
+            <p class="details"><strong>Interests:</strong> Philosophy, Poetry, Psychology, Visual Arts.</p>
+          </div>
         </div>
       </div>
     </main>
@@ -90,9 +102,13 @@ import Layout from '../layouts/Layout.astro';
     function openTab(evt, tabName) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tab-content");
-      for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; }
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
       tablinks = document.getElementsByClassName("tab-link");
-      for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); }
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
       document.getElementById(tabName).style.display = "block";
       evt.currentTarget.className += " active";
     }
@@ -101,24 +117,30 @@ import Layout from '../layouts/Layout.astro';
 
 <style>
   .resume-wrapper { display: grid; grid-template-columns: 280px 1fr; min-height: 80vh; }
-  .resume-sidebar { padding: 4rem 2rem 4rem 60px; border-right: 1px solid var(--border-line); background: white; }
+  .resume-sidebar { padding: 3rem 2rem; border-right: 1px solid #eee; }
   
-  /* Light Teal Background for content area */
-  .resume-content-area { background-color: #e0f2f1; padding: 4rem 10% 4rem 5%; }
-
   .tab-link {
     display: block; width: 100%; text-align: left; background: none; border: none;
-    font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; padding: 1.2rem; cursor: pointer; color: var(--charcoal);
+    font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; padding: 1rem; cursor: pointer; color: #333;
+    transition: 0.3s;
   }
-  .tab-link.active { color: var(--accent-teal); font-weight: 600; border-left: 4px solid var(--accent-teal); }
+  .tab-link.active { color: #3d7a76; font-weight: 600; border-left: 4px solid #3d7a76; }
 
-  .tab-content { display: none; }
+  .resume-teal-canvas { background-color: #3d7a76; padding: 4rem; display: flex; justify-content: center; align-items: flex-start; }
+
+  .tab-content { display: none; width: 100%; max-width: 800px; animation: fadeIn 0.4s ease; }
   .tab-content.active { display: block; }
   
-  .dark-teal-header { color: var(--dark-teal); font-size: 2.8rem; margin-bottom: 2rem; border-bottom: 1.5px solid var(--accent-teal); padding-bottom: 0.5rem; }
+  .resume-card { background: white; padding: 4rem; box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+  .card-header { color: #1a4340; font-size: 2.8rem; margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1rem; }
   
-  /* White boxes resting on the teal background */
-  .box { background-color: #ffffff; padding: 2.5rem; margin-bottom: 2rem; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-  .resume-list { padding-left: 1.2rem; margin-top: 1rem; }
-  .resume-list li { margin-bottom: 0.8rem; }
+  .entry { margin-bottom: 2.5rem; }
+  .org-name { font-size: 1.4rem; font-weight: bold; color: #333; margin-bottom: 0.2rem; }
+  .loc { font-weight: normal; font-style: italic; color: #666; font-size: 1.1rem; }
+  .position { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: #3d7a76; font-weight: 600; margin-bottom: 0.8rem; }
+  .details { margin-bottom: 0.5rem; line-height: 1.6; }
+  .resume-list { padding-left: 1.2rem; margin-top: 0.5rem; }
+  .resume-list li { margin-bottom: 0.5rem; }
+
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
 </style>
