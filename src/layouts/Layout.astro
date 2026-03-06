@@ -7,87 +7,92 @@ const { title } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{title} | Sofia Voumvourakis</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style is:global>
       :root {
-        --white: #ffffff;
-        --charcoal: #2c2c2c;
-        --muted-teal: #5f8d8a;
-        --light-grey: #f9f9f9;
-        --border: #e5e5e5;
+        --margin-color: #f0f4f4; /* Muted teal-grey for margins */
+        --paper-white: #ffffff;
+        --deep-teal: #28524f; /* For resume headers */
+        --bright-teal: #3d7a76; /* For accents/name */
+        --charcoal: #333333;
+        --border-color: #d1d9d9;
       }
       
       body {
         margin: 0;
-        background-color: var(--white);
-        color: var(--charcoal);
+        background-color: var(--margin-color); /* The colored margins */
         font-family: "Times New Roman", Times, serif;
-        line-height: 1.8;
-        -webkit-font-smoothing: antialiased;
+        color: var(--charcoal);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
       }
 
-      h1, h2, h3, .editorial-font {
-        font-family: 'Cormorant Garamond', serif;
-        font-weight: 400;
-        margin: 0;
+      /* Main container creates the 'framed' look */
+      .main-frame {
+        background-color: var(--paper-white);
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+        flex-grow: 1;
+        box-shadow: 0 0 50px rgba(0,0,0,0.05);
       }
 
       nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 3rem 10%;
-        background: var(--white);
+        padding: 2rem 5%;
+        background-color: #ffffff;
+        border-bottom: 2px solid var(--margin-color); /* Clear division */
       }
 
       .logo {
         font-family: 'Cormorant Garamond', serif;
-        font-size: 1.8rem;
+        font-size: 2rem;
         text-decoration: none;
         color: var(--charcoal);
-        letter-spacing: 3px;
         font-weight: 300;
       }
 
       .nav-links {
         display: flex;
-        gap: 3rem;
+        gap: 2.5rem;
       }
 
       .nav-links a {
         text-decoration: none;
         color: var(--charcoal);
         font-family: 'Cormorant Garamond', serif;
-        font-size: 1rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
+        font-size: 1.2rem;
+        /* No All-Caps */
+        text-transform: none; 
         transition: color 0.3s ease;
       }
 
-      /* Hover Interaction inspired by Transmission */
       .nav-links a:hover {
-        color: var(--muted-teal);
-        font-style: italic;
+        color: var(--bright-teal);
       }
 
-      section {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 2rem 5%;
+      h1, h2, h3 {
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 400;
       }
     </style>
   </head>
   <body>
-    <nav>
-      <a href="/" class="logo">SV</a>
-      <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/resume">Resume</a>
-        <a href="/art">Art</a>
-        <a href="/prose">Prose</a>
-        <a href="/contact">Contact</a>
-      </div>
-    </nav>
-    <slot />
+    <div class="main-frame">
+      <nav>
+        <a href="/" class="logo">SV</a>
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/resume">Resume</a>
+          <a href="/art">Art</a>
+          <a href="/prose">Prose</a>
+          <a href="/contact">Contact</a>
+        </div>
+      </nav>
+      <slot />
+    </div>
   </body>
 </html>
