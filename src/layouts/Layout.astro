@@ -1,81 +1,79 @@
 ---
 const { title } = Astro.props;
 ---
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{title} | Sofia Voumvourakis</title>
-    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
     <style is:global>
       :root {
-        --tan-base: #FDF6EC;
-        --tan-sidebar: #F5EBE0;
-        --charcoal: #333333;
-        --teal-accent: #4A7C77;
-        --soft-teal: #D1DEDC;
+        --white: #ffffff;
+        --charcoal: #2c2c2c;
+        --muted-teal: #5f8d8a;
+        --light-grey: #f9f9f9;
+        --border: #e5e5e5;
       }
       
       body {
         margin: 0;
-        background-color: var(--tan-base);
+        background-color: var(--white);
         color: var(--charcoal);
         font-family: "Times New Roman", Times, serif;
-        line-height: 1.6;
+        line-height: 1.8;
+        -webkit-font-smoothing: antialiased;
       }
 
-      .creative-header {
-        font-family: 'Pinyon Script', cursive;
-        font-weight: normal;
-      }
-
-      .elegant-title {
+      h1, h2, h3, .editorial-font {
         font-family: 'Cormorant Garamond', serif;
-        text-transform: uppercase;
-        letter-spacing: 2px;
+        font-weight: 400;
+        margin: 0;
       }
 
       nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 2rem 10%;
+        padding: 3rem 10%;
+        background: var(--white);
       }
 
       .logo {
         font-family: 'Cormorant Garamond', serif;
-        font-size: 2.2rem;
+        font-size: 1.8rem;
         text-decoration: none;
         color: var(--charcoal);
+        letter-spacing: 3px;
         font-weight: 300;
       }
 
       .nav-links {
         display: flex;
-        gap: 2.5rem;
+        gap: 3rem;
       }
 
       .nav-links a {
         text-decoration: none;
         color: var(--charcoal);
         font-family: 'Cormorant Garamond', serif;
-        font-size: 1.1rem;
-        transition: all 0.4s ease;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: color 0.3s ease;
       }
 
-      /* Hover Interaction */
+      /* Hover Interaction inspired by Transmission */
       .nav-links a:hover {
-        color: var(--teal-accent);
-        letter-spacing: 1px;
-        transform: translateY(-2px);
+        color: var(--muted-teal);
+        font-style: italic;
       }
 
       section {
-        max-width: 1000px;
+        max-width: 1100px;
         margin: 0 auto;
-        padding: 4rem 2rem;
+        padding: 2rem 5%;
       }
     </style>
   </head>

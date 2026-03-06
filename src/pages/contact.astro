@@ -2,54 +2,67 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="Contact">
-  <div class="contact-wrap">
-    <h1 class="creative-header contact-title"><u>Get in Touch</u></h1>
-    <p class="contact-sub">I’d like to hear from you!</p>
+  <div class="contact-center">
+    <div class="contact-header">
+      <h1 class="editorial-font"><u>Get in Touch</u></h1>
+      <p class="invite">I’d like to hear from you!</p>
+    </div>
 
-    <div class="links">
-      <a href="mailto:sev@wm.edu">sev@wm.edu</a> | 
+    <div class="links-block">
+      <a href="mailto:sev@wm.edu">sev@wm.edu</a>
+      <span class="sep">/</span>
       <a href="tel:5160000000">(516) 000-0000</a>
     </div>
 
-    <form class="contact-form">
-      <input type="text" placeholder="Full Name" />
-      <input type="email" placeholder="Email Address" />
-      <textarea placeholder="Your Message" rows="8"></textarea>
+    <form class="editorial-form">
+      <div class="input-wrap">
+        <input type="text" placeholder="Full Name" required />
+      </div>
+      <div class="input-wrap">
+        <input type="email" placeholder="Email Address" required />
+      </div>
+      <div class="input-wrap">
+        <textarea placeholder="Your Message" rows="8" required></textarea>
+      </div>
       <button type="submit">Send Message</button>
     </form>
   </div>
 </Layout>
 
 <style>
-  .contact-wrap { text-align: center; max-width: 600px; margin: 0 auto; }
-  .contact-title { font-size: 5rem; font-weight: bold; margin-bottom: 0; }
-  .contact-sub { font-size: 1.4rem; font-style: italic; margin-bottom: 3rem; }
-  .links { margin-bottom: 2rem; font-size: 1.2rem; }
-  .links a { color: var(--teal-accent); text-decoration: none; font-weight: bold; }
+  .contact-center { max-width: 600px; margin: 4rem auto; text-align: center; }
+  .contact-header h1 { font-size: 4rem; font-weight: bold; margin-bottom: 1rem; }
+  .invite { font-size: 1.3rem; font-style: italic; margin-bottom: 3rem; }
+  
+  .links-block { margin-bottom: 4rem; font-size: 1.2rem; }
+  .links-block a { color: var(--charcoal); text-decoration: none; border-bottom: 1px solid var(--border); transition: 0.3s; }
+  .links-block a:hover { color: var(--muted-teal); border-color: var(--muted-teal); }
+  .sep { margin: 0 1.5rem; color: var(--border); }
 
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers items */
-    gap: 1.5rem;
-  }
+  .editorial-form { display: flex; flex-direction: column; gap: 2rem; }
+  .input-wrap { width: 100%; }
   input, textarea {
-    width: 100%; /* Uniform length */
+    width: 100%;
     padding: 1.2rem;
-    border: 1px solid var(--soft-teal);
-    background: white;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    background: var(--light-grey);
     font-family: "Times New Roman", serif;
+    font-size: 1rem;
+    box-sizing: border-box;
   }
   button {
-    width: 100%; /* Uniform length with inputs */
-    padding: 1.2rem;
-    background: var(--teal-accent);
-    color: white;
+    width: 100%;
+    padding: 1.5rem;
+    background: var(--charcoal);
+    color: var(--white);
     border: none;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background 0.3s;
   }
-  button:hover { background: var(--charcoal); }
+  button:hover { background: var(--muted-teal); }
 </style>

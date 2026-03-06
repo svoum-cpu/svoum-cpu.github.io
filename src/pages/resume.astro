@@ -2,104 +2,114 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="Resume">
-  <div class="resume-container">
-    <aside class="resume-sidebar">
-      <h3 class="elegant-title">Navigation</h3>
-      <a href="#education">Education</a>
-      <a href="#skills">Skills</a>
-      <a href="#research">Research</a>
-      <a href="#projects">Policy Work</a>
-      <a href="#experience">Experience</a>
+  <div class="resume-layout">
+    <aside class="resume-nav">
+      <div class="nav-group">
+        <a href="#education">Education</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+      </div>
     </aside>
 
-    <main class="resume-body">
+    <main class="resume-content">
       <section id="education">
-        <h2 class="creative-header section-head">Education</h2>
+        <h2 class="editorial-header">Education</h2>
         <div class="entry">
-          <h3 class="elegant-title">William & Mary</h3>
-          <p class="details">B.A. Intended Majors: Government, Data Science (Dean's List) | Exp. May 2028</p>
-          <ul class="resume-list">
-            <li><strong>Technology & Data:</strong> Problem Solving with Generative AI, Intro to Data Science.</li>
-            <li><strong>Research & Policy:</strong> Research Methods, Philosophy of Technology, International Security, Political Theory.</li>
+          <h3>William & Mary</h3>
+          <p class="location">Williamsburg, VA | Exp. May 2028</p>
+          <p class="sub">B.A. Intended Majors: Government, Data Science (Dean's List)</p>
+          <ul class="details">
+            <li><strong>Technology & Data:</strong> Problem Solving with Generative AI, Introduction to Data Science</li>
+            <li><strong>Research & Policy:</strong> Research Methods, Philosophy of Technology, International Security, Introduction to Political Theory</li>
           </ul>
         </div>
         <div class="entry">
-          <h3 class="elegant-title">Brooklyn Technical High School</h3>
-          <p class="details">Advanced Regents Diploma | Law & Society Major | June 2024</p>
+          <h3>Brooklyn Technical High School</h3>
+          <p class="location">Brooklyn, NY | June 2024</p>
+          <p class="sub">Advanced Regents Diploma | Law & Society Major</p>
         </div>
       </section>
 
-      <section id="skills">
-        <h2 class="creative-header section-head">Skills</h2>
-        <p>Java | Python | Generative AI Implementation | Problem-Solving | Communication | Critical Thinking</p>
-        <p><strong>Languages:</strong> Greek (Intermediate), Italian (Intermediate)</p>
-      </section>
-
       <section id="research">
-        <h2 class="creative-header section-head">Research Experience</h2>
+        <h2 class="editorial-header">Research Experience</h2>
         <div class="entry">
-          <h3 class="elegant-title">Democratic Erosion Project</h3>
-          <p class="role">Project Manager (Aug 2025-Present)</p>
-          <ul class="resume-list">
-            <li>Spearheaded onboarding for 14 research assistants on democratic erosion data entry.</li>
-            <li>Produced a 20-minute instructional video for future research cohorts.</li>
-            <li>Synthesized news articles (2008-2024) regarding threats to democratic institutions.</li>
+          <h3>Democratic Erosion Project</h3>
+          <p class="location">Project Manager | Aug 2025–Present</p>
+          <ul class="details">
+            <li>Spearheaded onboarding and technical training of 14 research assistants on subnational democratic erosion identification and data entry protocols.</li>
+            <li>Optimized training by producing a 20-minute instructional video to clarify and supplement existing training materials.</li>
+            <li>Identified and synthesized relevant news articles from 2008-2024 about threats to democratic institutions in the United States.</li>
           </ul>
         </div>
       </section>
 
       <section id="projects">
-        <h2 class="creative-header section-head">Research Projects</h2>
+        <h2 class="editorial-header">Research Projects</h2>
         <div class="entry">
-          <h3 class="elegant-title">Digital Rights & Security</h3>
-          <ul class="resume-list">
-            <li><strong>Deepfakes:</strong> Impact of NCII deepfakes on female politicians.</li>
-            <li><strong>FRT:</strong> Technical feasibility of Facial Recognition in schools.</li>
-            <li><strong>Policy:</strong> National School Lunch Program (NSLP) effectiveness.</li>
-          </ul>
+          <h3>Facial Recognition Technology (FRT)</h3>
+          <p class="details-text">Investigated the use of FRT to enhance school security, analyzing technical feasibility and potential implementation challenges.</p>
+        </div>
+        <div class="entry">
+          <h3>Deepfakes & Female Politicians</h3>
+          <p class="details-text">Conducted research on the impact of NCII deepfakes on female political participation and digital safety.</p>
         </div>
       </section>
 
       <section id="experience">
-        <h2 class="creative-header section-head">Additional Experience</h2>
+        <h2 class="editorial-header">Additional Experience</h2>
         <div class="entry">
-          <h3 class="elegant-title">Nassau County Executive</h3>
-          <p class="role">OCVA Intern (Jun 2025-Aug 2025)</p>
-          <p>Supported community outreach and client services in court settings.</p>
+          <h3>Office of the Nassau County Executive</h3>
+          <p class="location">OCVA Summer Intern | Jun 2025–Aug 2025</p>
+          <ul class="details">
+            <li>Supported community outreach by communicating with families in court and researching support groups.</li>
+          </ul>
         </div>
         <div class="entry">
-          <h3 class="elegant-title">Smok-Haus Enterprises</h3>
-          <p class="role">Marketing & Customer Engagement (2019-2024)</p>
-          <p>Designed packaging for "Tipsy Bull" using Procreate/Vectornator; managed ~200 reviews.</p>
+          <h3>Smok-Haus Enterprises</h3>
+          <p class="location">Marketing & Customer Engagement | 2019–2024</p>
+          <p class="details-text">Designed marketing material and packaging for Tipsy Bull using Procreate and Vectornator.</p>
         </div>
+      </section>
+
+      <section id="skills">
+        <h2 class="editorial-header">Skills</h2>
+        <p class="skills-row">Java / Python / Problem-Solving / Communication / Critical Thinking</p>
+        <p class="skills-row"><strong>Languages:</strong> Greek (Intermediate), Italian (Intermediate)</p>
       </section>
     </main>
   </div>
 </Layout>
 
 <style>
-  .resume-container { display: flex; gap: 4rem; }
-  .resume-sidebar {
+  .resume-layout { display: flex; gap: 6rem; margin-top: 2rem; }
+  .resume-nav {
     position: sticky;
-    top: 2rem;
+    top: 5rem;
     height: fit-content;
-    background: var(--tan-sidebar);
-    padding: 2rem;
-    min-width: 180px;
-    border-radius: 15px;
+    width: 200px;
+    border-right: 1px solid var(--border);
   }
-  .resume-sidebar a {
+  .nav-group a {
     display: block;
-    padding: 0.8rem 0;
     text-decoration: none;
     color: var(--charcoal);
-    font-weight: bold;
-    border-bottom: 1px solid var(--soft-teal);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    transition: all 0.3s;
   }
-  .resume-sidebar a:hover { color: var(--teal-accent); }
-  
-  .section-head { font-size: 3.5rem; color: var(--teal-accent); margin-bottom: 1rem; }
-  .entry { margin-bottom: 3rem; }
-  .details { font-style: italic; color: var(--teal-accent); }
-  .resume-list { padding-left: 1.2rem; }
+  .nav-group a:hover { color: var(--muted-teal); padding-left: 10px; }
+
+  .editorial-header { font-size: 3.5rem; border-bottom: 1px solid var(--charcoal); margin-bottom: 2.5rem; font-weight: 300; }
+  .entry { margin-bottom: 4rem; }
+  h3 { font-size: 1.8rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.5rem; }
+  .location { font-style: italic; color: var(--muted-teal); margin-top: -0.5rem; margin-bottom: 0.5rem; }
+  .sub { font-weight: bold; margin-bottom: 1rem; }
+  .details { padding-left: 1.2rem; }
+  .details-text { font-size: 1.1rem; }
+  .skills-row { font-size: 1.2rem; margin-bottom: 1rem; }
+
+  @media (max-width: 900px) { .resume-layout { flex-direction: column; } .resume-nav { display: none; } }
 </style>

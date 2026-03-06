@@ -3,10 +3,11 @@ import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="Home">
   <main class="hero">
-    <h1 class="creative-header name-hero">Sofia Voumvourakis</h1>
-    <p class="intro-text">
+    <h1 class="hero-name">Sofia Voumvourakis</h1>
+    <div class="hero-divider"></div>
+    <p class="hero-intro">
       Hello! I’m a government and data science student who often finds herself asking: 
-      <span class="question-italic">“To advance humanity, are we losing it?”</span> 
+      <span class="italic-question">“To advance humanity, are we losing it?”</span> 
       I am driven to build a future where technology governance is resilient and equitable. 
       Beyond the screen, I’m creative at heart—dabbling in poetry and art—and curious 
       in practice—exploring philosophy, psychology, and global perspectives.
@@ -23,19 +24,25 @@ import Layout from '../layouts/Layout.astro';
     align-items: center;
     text-align: center;
   }
-  .name-hero {
-    font-size: 7rem; /* Large and artistic */
-    margin: 0;
-    color: var(--charcoal);
-  }
-  .intro-text {
-    max-width: 600px;
-    font-size: 1.25rem;
-    margin-top: 2rem;
-  }
-  .question-italic {
+  .hero-name {
+    font-size: clamp(3rem, 10vw, 8rem);
     font-style: italic;
-    color: var(--teal-accent);
-    font-weight: bold;
+    font-weight: 300;
+    letter-spacing: -2px;
+  }
+  .hero-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--muted-teal);
+    margin: 2rem 0;
+  }
+  .hero-intro {
+    max-width: 650px;
+    font-size: 1.3rem;
+    line-height: 1.8;
+  }
+  .italic-question {
+    font-style: italic;
+    color: var(--charcoal);
   }
 </style>

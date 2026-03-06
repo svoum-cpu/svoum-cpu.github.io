@@ -2,12 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="Prose">
-  <div class="prose-background">
-    <article class="story-container">
-      <h1 class="creative-header blog-title">Gathering Figs</h1>
-      <h2 class="subtitle">A memory of Pappou and the garden</h2>
+  <div class="prose-container">
+    <div class="fig-overlay"></div>
+    <article class="prose-content">
+      <h1 class="prose-title">Gathering Figs</h1>
+      <p class="prose-subtitle">A memory of Pappou and the garden</p>
       
-      <div class="story-text">
+      <div class="text-body">
         <p>My feet were carefully placed in the stable crevices of the long smooth limbs of the tree; while I was normally scared of heights, the feeling of something alive supporting me gave me comfort. I reached forward, eyeing a fig whose plump green skin was slowly tearing away from the red and white flesh. I twisted the stem to release it from the branch, and dropped it into the basket below.</p>
         
         <p>My Pappou, my grandfather, gave a sharp nod of approval up at me, while hooking his gnarled cane around another branch to bring it down for further inspection. I listened to his advice earnestly, wanting to preserve his ways. When the basket was full, I gently slipped down from the tree; the red soil was laden with hay and plastered with a mush of ant-ridden figs.</p>
@@ -27,22 +28,30 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-  .prose-background {
+  .prose-container {
+    position: relative;
     min-height: 100vh;
     background-image: url('/figtree.jpeg');
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
-    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+    padding: 6rem 0;
   }
-  .story-container {
-    max-width: 750px;
-    margin: 0 auto;
-    background: rgba(253, 246, 236, 0.92); /* Tan base but opaque */
-    padding: 4rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  .fig-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.85); /* Professional opaque layer */
   }
-  .blog-title { font-size: 5rem; text-align: center; }
-  .subtitle { text-align: center; font-family: 'Cormorant Garamond', serif; font-weight: bold; font-size: 1.5rem; margin-bottom: 3rem; }
-  .story-text p { font-size: 1.25rem; margin-bottom: 2rem; }
+  .prose-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    background: var(--white);
+    padding: 5rem;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.05);
+  }
+  .prose-title { font-size: 5rem; text-align: center; margin-bottom: 1rem; }
+  .prose-subtitle { text-align: center; font-weight: bold; font-size: 1.4rem; margin-bottom: 4rem; color: var(--muted-teal); }
+  .text-body p { font-size: 1.25rem; margin-bottom: 2rem; }
 </style>

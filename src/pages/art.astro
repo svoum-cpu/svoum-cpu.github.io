@@ -13,61 +13,82 @@ import greenAbstract from '../assets/sketch11.png'; //Imports sketch11
 import blueAbstract from '../assets/sketch6.png'; //Imports sketch6
 import blackAbstract from '../assets/sketch17.png'; //Imports sketch17
 ---
-
 <Layout title="Art">
-  <div class="art-page">
-    <div class="art-grid">
-      <a href="#threeAliens" class="art-item"><Image src={threeAliens} alt="Art 1" /></a>
-      <a href="#chaosSketch" class="art-item"><Image src={chaosSketch} alt="Art 2" /></a>
-      <a href="#trioAbstract" class="art-item"><Image src={trioAbstract} alt="Art 3" /></a>
-      <a href="#brokenFace" class="art-item"><Image src={brokenFace} alt="Art 4" /></a>
-      <a href="#orangeAbstract" class="art-item"><Image src={orangeAbstract} alt="Art 5" /></a>
-      <a href="#threeHeads" class="art-item"><Image src={threeHeads} alt="Art 6" /></a>
-      <a href="#greenAbstract" class="art-item"><Image src={greenAbstract} alt="Art 7" /></a>
-      <a href="#blueAbstract" class="art-item"><Image src={blueAbstract} alt="Art 8" /></a>
-      <a href="#blackAbstract" class="art-item"><Image src={blackAbstract} alt="Art 9" /></a>
+  <div class="gallery-wrapper">
+    <div class="editorial-grid">
+      <div class="grid-item">
+        <a href="#expand1"><Image src={threeAliens} alt="Artwork" class="gallery-img"/></a>
+      </div>
+      <div class="grid-item">
+        <a href="#expand2"><Image src={chaosSketch} alt="Artwork" class="gallery-img"/></a>
+      </div>
+      <div class="grid-item">
+        <a href="#expand3"><Image src={trioAbstract} alt="Artwork" class="gallery-img"/></a>
+      </div>
+      <div class="grid-item">
+        <a href="#expand4"><Image src={brokenFace} alt="Artwork" class="gallery-img"/></a>
+      </div>
+      <div class="grid-item">
+        <a href="#expand5"><Image src={orangeAbstract} alt="Artwork" class="gallery-img"/></a>
+      </div>
+      <div class="grid-item">
+        <a href="#expand6"><Image src={threeHeads} alt="Artwork" class="gallery-img"/></a>
+      </div>
+      <div class="grid-item">
+        <a href="#expand7"><Image src={greenAbstract} alt="Artwork" class="gallery-img"/></a>
+      </div>
+      <div class="grid-item">
+        <a href="#expand8"><Image src={blueAbstract} alt="Artwork" class="gallery-img"/></a>
+      </div>
+      <div class="grid-item">
+        <a href="#expand9"><Image src={blackAbstract} alt="Artwork" class="gallery-img"/></a>
     </div>
 
-      <div id ="threeAliens" class="lightbox"><a href="#" class="close"></a><Image src={threeAliens} alt="Art 1" /></div>
-      <div id ="chaosSketch" class="lightbox"><a href="#" class="close"></a><Image src={chaosSketch} alt="Art 2" /></div>
-      <div id ="trioAbstract" class="lightbox"><a href="#" class="close"></a><Image src={trioAbstract} alt="Art 3" /></div>
-      <div id ="brokenFace" class="lightbox"><a href="#" class="close"></a><Image src={brokenFace} alt="Art 4" /></div>
-      <div id ="orangeAbstract" class="lightbox"><a href="#" class="close"></a><Image src={orangeAbstract} alt="Art 5" /></div>
-      <div id ="threeHeads" class="lightbox"><a href="#" class="close"></a><Image src={threeHeads} alt="Art 6" /></div>
-      <div id ="greenAbstract" class="lightbox"><a href="#" class="close"></a><Image src={greenAbstract} alt="Art 7" /></div>
-      <div id ="blueAbstract" class="lightbox"><a href="#" class="close"></a><Image src={blueAbstract} alt="Art 8" /></div>
-      <div id ="blackAbstract" class="lightbox"><a href="#" class="close"></a><Image src={blackAbstract} alt="Art 9" /></div>
-    </div>
+    <div id="expand1" class="modal"><a href="#" class="modal-close"></a><div class="modal-content"><Image src={threeAliens} alt="Artwork" /></div></div>
+    <div id="expand2" class="modal"><a href="#" class="modal-close"></a><div class="modal-content"><Image src={chaosSketch} alt="Artwork" /></div></div>
+    <div id="expand3" class="modal"><a href="#" class="modal-close"></a><div class="modal-content"><Image src={trioAbstract} alt="Artwork" /></div></div>
+    <div id="expand4" class="modal"><a href="#" class="modal-close"></a><div class="modal-content"><Image src={brokenFace} alt="Artwork" /></div></div>
+    <div id="expand5" class="modal"><a href="#" class="modal-close"></a><div class="modal-content"><Image src={orangeAbstract} alt="Artwork" /></div></div>
+    <div id="expand6" class="modal"><a href="#" class="modal-close"></a><div class="modal-content"><Image src={threeHeads} alt="Artwork" /></div></div>
+    <div id="expand7" class="modal"><a href="#" class="modal-close"></a><div class="modal-content"><Image src={greenAbstract} alt="Artwork" /></div></div>
+    <div id="expand8" class="modal"><a href="#" class="modal-close"></a><div class="modal-content"><Image src={blueAbstract} alt="Artwork" /></div></div>
+    <div id="expand9" class="modal"><a href="#" class="modal-close"></a><div class="modal-content"><Image src={blackAbstract} alt="Artwork" /></div></div>
+  </div>
 </Layout>
 
 <style>
-  .art-grid {
+  .gallery-wrapper { padding: 2rem 0; }
+  .editorial-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    padding: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
   }
-  .art-item img {
+  .grid-item {
+    background: var(--light-grey);
+    padding: 15px;
+    transition: filter 0.3s ease;
+  }
+  .grid-item:hover { filter: brightness(0.95); }
+  .gallery-img {
     width: 100%;
-    height: 350px;
+    height: 500px;
     object-fit: cover;
-    border-radius: 5px;
-    transition: transform 0.3s;
+    display: block;
   }
-  .art-item:hover img { transform: scale(1.03); }
 
-  /* Lightbox Logic */
-  .lightbox {
+  /* Sophisticated Modal Logic */
+  .modal {
     display: none;
     position: fixed;
-    z-index: 999;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(0,0,0,0.8);
+    background: rgba(255, 255, 255, 0.98);
+    z-index: 1000;
     justify-content: center;
     align-items: center;
   }
-  .lightbox:target { display: flex; }
-  .lightbox img { max-width: 90%; max-height: 80%; border: 5px solid white; }
-  .close { position: absolute; width: 100%; height: 100%; cursor: default; }
+  .modal:target { display: flex; }
+  .modal-content { max-width: 90%; max-height: 90%; }
+  .modal-content img { width: auto; height: auto; max-width: 100%; max-height: 85vh; border: 1px solid var(--border); }
+  .modal-close { position: absolute; width: 100%; height: 100%; cursor: zoom-out; }
 </style>
